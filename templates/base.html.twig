@@ -13,5 +13,6 @@
     </head>
     <body>
         {% block body %}{% endblock %}
+        <div {{ turbo_stream_listen('books', 'default', { withCredentials: true, subscribe: 'books' }) }}></div>
     </body>
 </html>

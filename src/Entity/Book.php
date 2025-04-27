@@ -8,6 +8,7 @@ use Symfony\UX\Turbo\Attribute\Broadcast;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Broadcast]
+#[Broadcast(topics: ['books'], private: true)]
 class Book
 {
     #[ORM\Id]
